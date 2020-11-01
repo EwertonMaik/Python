@@ -5,3 +5,6 @@ anaconda-navigator
 
 # Iniciando o Jupyter Notebook via linha de comando
 jupyter notebook
+
+# Executando um script Python via linha de comando
+C:\PythonFundamentos>python hello.py
