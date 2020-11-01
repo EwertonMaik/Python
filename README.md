@@ -7,5 +7,6 @@ Desenvolvimento Linguagem Python
 - 💻 Jupyter Notebook
 - 🕷 Spyder
 - 🚩 IDE PyCharm Community Edition
+- 🌐 Google Colab (https://colab.research.google.com/)
 
 ▶ Jupyter Notebook - Ferramenta Web, cada linha é representado por uma célula, que pode ser editada e redirecionada. As células podem ser code, markdown e é possível adicionar código html dentro do arquivo jupyter notebook, com textos estilos, equações e visualizações interativas.
