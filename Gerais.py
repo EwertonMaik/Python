@@ -69,3 +69,68 @@ sobrenome = "Paulo"
 nomeCompleto = nome + " " + sobrenome
 print(nomeCompleto)
 nomeCompleto # A variável é impressa simplesmente sem a função print também
+
+# String armazenam informações em formato texto, em uma sequência de caracteres e tem o controle de cada elemento.
+# Em Python, String aceita aspas SIMPLES ou DUPLA
+# Colchetes [] representa o índice de um objeto. 0 é o primeiro valor.
+texto = "Python e Análise de Dados"
+# Imprime os valore das posições 0, 1, 2
+texto[0]
+texto[1]
+texto[2]
+
+print('Texto com Aspas Simples')
+print("Texto com Aspas Dupla")
+
+# Quebra de linha dentro da String
+print("O texto \n Aqui em outra Linha \n Aqui em outra Linha")
+
+# SLICING - Trabalha com corte da String
+s = "ABCDEFGHIJ"
+s[1:] # Imprime da posição 1 até p fim da String
+s[:3] # Imprime da posição 0 até a posição 3 da String
+s[:]  # Imprime toda String
+s[-1] # Imprime do fim para o início, neste caso só a última posição (J)
+s[:-1] # Imprime tudo, exceto a última posição
+
+s[::2] # Imprime a string pulando sempre a cada 2 caracteres
+s[::-2] # Mesma função da anterior, porém do fim para o início
+
+# Imprimindo um valor da variável usando operador de multiplicação
+letra = "X"
+letra * 3
+>>> XXX
+
+# Demais Funções com String
+s = "abcdefghij"
+s.upper() # Imprime tudo Maiúsculo
+s.lower() # Imprime tudo Minúsculo
+s.split() # Divide a string por padrão nos espços em Branco
+s.split('e') # Divide a string ao encontrar o caracter (e)
+
+s.Capitalize() # Imprime a string com apenas a 1º Posição em Maiúsculo
+s.count('a') # Retorna a quantidade de caracteres, neste caso conta apenas (a)
+s.find('g') # Pesquisa e retorna a posição do caractere passado como parâmetro
+s.islower() # Retorna False ou True, se tem caracter Minúsculo
+s.isspace() # Retorna False ou True, se tem espaços
+s.endswith('o') # Retorna False ou True, se a string termina com o parâmetro passado
+
+# Comparando String
+print("Python" == "R")
+>>> False
+
+print("Python" == "Python")
+>>> True
+
+
+
+
+
+
+
+
+
+
+
+
+
