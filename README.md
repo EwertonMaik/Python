@@ -14,5 +14,7 @@ Desenvolvimento Linguagem Python
 ▶ Python é uma linguagem interpretada, clara e de fácil leitura e bastante expressiva. Números e Operações Matemáticas:
 - Tipos de Números em Python : (int / float/ string ...)
 - Funções e Operações com números - type(), int(), float(), Docs Funções Built-in - https://docs.python.org/3/library/index.html
-- Aritmética (+, -, *, /, %, **, int(), float() )
+- Operadores Aritméticos (+, -, *, /, %, **, int(), float() )
 - Operadores Relacionais (==, !=, >, <, >=, <= )
+- Operadores Atribuição (=, +=, -=, *=, /=, %=, **=, //=)
+- Operadores Lógicos (AND, OR, NOT)
