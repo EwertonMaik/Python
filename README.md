@@ -19,7 +19,9 @@ Desenvolvimento Linguagem Python
 - Operadores Atribuição (=, +=, -=, *=, /=, %=, **=, //=)
 - Operadores Lógicos (AND, OR, NOT)
 
-▶ Estrutura de Dados :
-- Listas são criados com []
-- Dicionários são criados com {}
-- Tuplas são criados com ()
+▶ Estrutura de Dados Tipos Objetos:
+- Listas são criados com [] - sequência e Mutável
+- Dicionários são criados com {} - Mapeamento e Mutável
+- Tuplas são criados com () - Sequência e Imutável
+- Strings - Sequência e Imutável
+- Números (int, float)- Numérico e Imutável 
