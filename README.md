@@ -18,3 +18,8 @@ Desenvolvimento Linguagem Python
 - Operadores Relacionais (==, !=, >, <, >=, <= )
 - Operadores Atribuição (=, +=, -=, *=, /=, %=, **=, //=)
 - Operadores Lógicos (AND, OR, NOT)
+
+▶ Estrutura de Dados :
+- Listas são criados com []
+- Dicionários são criados com {}
+- Tuplas são criados com ()
