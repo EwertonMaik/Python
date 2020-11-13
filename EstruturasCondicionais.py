@@ -1,8 +1,6 @@
--- 1 - Estruturas Condicionais
-If/ Else/ Elif
-Repetição
-Métodos
-Funções
+-- Estruturas Condicionais
+-- If/ Else/ Elif
+-- Repetição
 
 --Condicional Simples
 if (expressao 1):
