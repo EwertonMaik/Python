@@ -33,7 +33,7 @@ if Nome == "Pedro":
 else:
 	print("Invalido!")
 
-if Idade >= 20 and Nome == "Pedro"
+if Idade >= 20 and Nome == "Pedro" -- Usando o Operador AND - As duas espressões devem ser verdadeiras
 	print("Liberado!")
 else:
 	print("Bloqueado!")
@@ -48,3 +48,17 @@ elif dia == "Terça":
 	print("Hoje é Terça!")
 else:
 	print("Dia Inválido!")
+
+if Idade >= 20 or Nome == "Pedro" -- Usando o Operador OR - Pelo menos uma expressão deve ser verdadeira
+	print("Liberado!")
+else:
+	print("Bloqueado!")
+
+
+-- Usando Entrada de dados com INPUT
+nun01 = input('Digite um Número : ') -- Variável recebe valor digitado pelo usuário
+	      
+if (num01 % 2) == 0:
+	print("Número Par!")
+else:
+	print("Número Impar!)
