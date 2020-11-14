@@ -1,6 +1,6 @@
 -- Estruturas Condicionais
 -- If/ Else/ Elif
--- Repeticao - LOOP FOR
+-- Repeticao - LOOP FOR, WHILE
 
 --Condicional Simples
 if (expressao 1):
@@ -97,3 +97,32 @@ for cont in range(0,50,2):
 --Imprimindo sequencias de uma string
 for string in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
 	print(string)
+
+--Loops Aninhados - Um Loop For dentro de outro Loop For
+--A lista de 0 a´te 3 será repetida 5X
+for a in range(0, 5):
+	for b in range(0, 3):
+	   print(b)
+
+--Usando um Loop For para Somar os valores de uma Lista e utilizando um contador
+lista03 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+soma = 0
+count = 0
+for i in lista03:
+	soma += i --Isso é igual a soma = soma + i
+	count += 1 --Isso é igual a count = count + 1
+print(soma)
+	  
+--Imprimindo Listas dentro de uma Lista
+lista04 = [ [1, 2], [1, 2, 3], [1, 2, 3, 4] ]
+pos = lista04[2] -- recebe os valores da posição 2
+for i in lista04:
+	print(lista04)
+	print(pos)
+
+--Pesquisando valores na Lista
+lista05 = ['A', 'B', 'C','D','E','F']
+pesquisa = input('Digite o valorer que deseja buscar: ')
+for i in lista05:
+	if i == pesquisa:
+	  print('Valor %r Encontrado na Lista' %(i) )
