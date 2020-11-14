@@ -62,3 +62,13 @@ if (num01 % 2) == 0:
 	print("Número Par!")
 else:
 	print("Número Impar!)
+
+--Usando PlaceHolders para exibir valores
+var01 = 'Variável 01'
+var02 = 'Variável 02'
+print('Imprimindo o valor var01 = %r e o valor de var02 = s%' %(var01, var02)) -- Onde existe um letra com % é substituido pelo valor das variáveis %(var01, var02) conforme a ordem
+
+
+
+
+
