@@ -1,6 +1,6 @@
 -- Estruturas Condicionais
 -- If/ Else/ Elif
--- Repetição
+-- Repeticao - LOOP FOR
 
 --Condicional Simples
 if (expressao 1):
@@ -68,7 +68,32 @@ var01 = 'Variável 01'
 var02 = 'Variável 02'
 print('Imprimindo o valor var01 = %r e o valor de var02 = s%' %(var01, var02)) -- Onde existe um letra com % é substituido pelo valor das variáveis %(var01, var02) conforme a ordem
 
+--Utilizando a estrutura Loop For
 
+--Usando For para imprimir valores de uma TUPLA
+tupla01 = (1, 2, 3, 4, 5)
+for i in tupla01:
+	print(i)
 
+--Usando For parar imprimir valores de uma LISTA
+lista01 = ['Carro', 'Moto', 'Bicicleta']
+for i in lista01:
+	print(i)
 
+--Imprime os números pares da lista, realizando divisão por mod, resto da divisão igual a zero	      
+lista02 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for i in lista02:
+	if i % 2 == 0:
+	      print(i)
 
+--Imprimindo valores com RANGE
+for cont in range(0,5):
+	print(cont)
+
+--Imprimindo valdores com RANGE de 0 até 50 e pulando em 2 em 2   
+for cont in range(0,50,2):
+	print(cont)
+
+--Imprimindo sequencias de uma string
+for string in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+	print(string)
