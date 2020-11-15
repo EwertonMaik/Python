@@ -149,6 +149,21 @@ else :
     print('Fim Loop')
 
 
+--Interrompe a execução do programa quando count for igual a 4
+count = 0
+while count < 100:
+    if count == 4:
+	break
+    else:
+        pass
+    print(count)
+    count = count + 1 -- equivalente a count += 1
+
+--String será impressa, com exceção da letra h
+for string in "Python":
+    if string == "h"
+	continue
+    print(string)
 
 
 
