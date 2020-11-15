@@ -165,8 +165,24 @@ for string in "Python":
 	continue
     print(string)
 
+--Utilizando um While e For para validar e exibir números primos
+--Todo número é divisivel por 1 e ele mesmo, logo o algorítimo verifica se o número tem outro divisor
+--Caso não, é um número primo
 
+for i in range(2, 30):
+    j = 2
+    count = 0
+    while j < i:
+	if i % j == 0:
+	   count = 1
+	   j = j + 1
+	else:
+	   j = j + 1
 
+    if count == 0:
+	print(str(i) + " é um número primo" )
+    else:
+	count = 0
 
 
 
