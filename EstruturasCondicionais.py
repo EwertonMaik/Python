@@ -131,6 +131,23 @@ for i in lista05:
 	if i == pesquisa:
 	  print('Valor %r Encontrado na Lista' %(i) )
 
+--Condicional WHILE
+--Break : Interrompe a execução do While, encerra o programa
+--Continue : Quando executado, o programa pula esta iteração e passa para a proxima
+--Pass : Usando quando não há código desenvolvido, é executado e contínua para proxima iteração
+
+count = 0
+while count < 10:
+    print(count)
+    count = count + 1
+
+x = 0
+while x < 10 :
+    print(x)
+    x += 1 --Isso é o mesmo que x = x + 1
+else :
+    print('Fim Loop')
+
 
 
 
