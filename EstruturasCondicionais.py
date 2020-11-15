@@ -184,5 +184,16 @@ for i in range(2, 30):
     else:
 	count = 0
 
+--Função RANGE (Tem um start, stop, step)
+range(1, 100, 2) --Lista de 1 até 100, pulando e 2 valores
+
+for i in range(1, 100, 2): -- aceita números negativos
+    print(i)
+
+--Pega o tamanho da lista, e passa no parãmetro do range e imprime os valores
+lista = ['A', 'B', 'C', 'D']
+tamanho_lista = len(lista)
+for i in range(0, tamanho_lista):
+	print(lista[i])
 
 
