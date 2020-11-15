@@ -16,6 +16,10 @@ elif (expressao 2):
 else:
 	print("Comando executado caso a expressão 1 e e sejam Falsa")
 
+--Condicional While
+while (expressao1):
+	print("Comando executando enquanto a expressão1 for verdadeira")
+
 -- Simples
 if 10 > 5:
 	print("Sim! 10 é Maio 5")
@@ -126,3 +130,11 @@ pesquisa = input('Digite o valorer que deseja buscar: ')
 for i in lista05:
 	if i == pesquisa:
 	  print('Valor %r Encontrado na Lista' %(i) )
+
+
+
+
+
+
+
+
