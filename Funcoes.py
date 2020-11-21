@@ -1,7 +1,6 @@
 -- Funções em Python
-formato geral de uma função é:
+#formato geral de uma função é:
 def nome da função(arg1, arg2):
-"Aqui vão os comentários, documentando sua função"
 
 --Criando Funções
 def minhaFuncao():
