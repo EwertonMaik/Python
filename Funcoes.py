@@ -1,4 +1,5 @@
--- Funções em Python
+-- Funções é um dispositivo que agrupa um conjunto de instruções para que elas possam ser executadas mais de uma vez.
+-- Funções também permitem especificar os parâmetros que podem servir como entrada para as funções.
 #formato geral de uma função é:
 def nome da função(arg1, arg2):
 
