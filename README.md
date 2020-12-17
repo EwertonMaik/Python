@@ -25,3 +25,11 @@ Desenvolvimento Linguagem Python
 - Tuplas são criados com () - Sequência e Imutável
 - Strings - Sequência e Imutável
 - Números (int, float)- Numérico e Imutável 
+
+▶ Métodos - Manipulação - Leitura e Gravação de Arquivos
+- open()       - Abrir arquivo
+- read()       - Ler arquivo
+- write()      - Gravar no arquivo
+- seek()       - Retorna inicio arquivo
+- readlines()  - Retorja a lista de linhas arquivo
+- close()      - Fecha arquivo
