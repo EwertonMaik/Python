@@ -14,3 +14,7 @@ df = pd.read_csv(va01)  # Variável recebendo a leitura feita pelo pandas
 
 df.head() # Exibe a apresentação do arquivo de forma tabular, aceita parametro para delimitar suas linhas
 df.head(10)
+
+df.tail() # Exibe apenas os últimos 5 registros do arquivo
+
+df.info() # Exibe diversas informações do arquivo
