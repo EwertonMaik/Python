@@ -49,3 +49,16 @@ var04.close()
 var04 = open(nomeArquivo, "r") # Realizando aberturda em modo r - read
 print(var04.read() )
 var04.close()
+
+# Criando Arquivos pelo JUPYTER NOTEBOOK
+%%writefile arquivos/teste.txt
+ESTE TEXTO SERÁ ADICIONADO AO ARQUIVO CRIADO
+
+var05 = open("arquivos/teste.txt", "r") # Realizando a abertura do Arquivo
+print(var05.read() ) # Imprime o conteúdo da variável
+var05.seek(0) # Retorna o posicionamento de leitura do arquvo para posição inicial
+var05.readlines() # Realiza a leitura por linhas
+
+# Lendo e imprimindo o arquivo - utilizando um FOR
+for line in  open("arquivos/teste.txt"):
+  print(line)
