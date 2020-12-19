@@ -62,3 +62,36 @@ var05.readlines() # Realiza a leitura por linhas
 # Lendo e imprimindo o arquivo - utilizando um FOR
 for line in  open("arquivos/teste.txt"):
   print(line)
+
+# Abrindo e Lendo um arquivo CSV - modo - r - read
+var06 = open('arquivos/salarios.csv', 'r') # Realizado abertura em modo
+var07 = var06.read() # Variável recebe a leitura do arquivo
+linhas = var07.split("\n") # Variável recebe o valor do arquivo split - cortado em pedaços pela quebra de linha
+full_data = []
+
+# Percorre todos linhas e adiciona - append no vetor [] - full_data
+for linha in linhas:
+  split_linha = linha.split(",") # Realiza o corte na ocorrencia de uma virgula
+  full_data.append(split_linha)  # Adiciona a linha no vetor
+  first_row = full_data[0]
+
+print(full_data) # Imprime todo vetor
+
+# Usando um for para contar quantas linhas o arquivo tem
+count = 0
+for row in full_data:
+  count += 1
+print(count) # Imprime a variável que foi incrementada a partir de cada linha percorrida pela for
+
+# Usando um for para contar quantas colunas tem a tabela
+count = 0
+for coluna in first_row:
+  count = count + 1
+print(count) # Imprime a variável que foi incrementada a partir de cada coluna percorrida pela for
+
+
+
+
+
+
+
