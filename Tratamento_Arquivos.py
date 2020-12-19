@@ -38,3 +38,14 @@ var03.close()
 
 var03 = open("arquivos/arquivo01.txt", "r")
 print(var03.read() )
+
+# Exemplo - Usando um INPUT para passar o nome do Arquivos
+nomeArquivo = input("Digite o nome do arquivo: ")
+nomeArquivo = nomeArquivo + ".txt" #Concateno o nome do arquivo com o texto - .txt para formar o nome e extensão do arquivo
+var04 = open(nomeArquivo, "w") # Realizando abertura em modo w - writer
+var04.write("Incluíndo texto que arquivo criado")
+var04.close()
+
+var04 = open(nomeArquivo, "r") # Realizando aberturda em modo r - read
+print(var04.read() )
+var04.close()
