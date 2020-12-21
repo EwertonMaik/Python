@@ -50,7 +50,7 @@ var04 = open(nomeArquivo, "r") # Realizando aberturda em modo r - read
 print(var04.read() )
 var04.close()
 
-# Criando Arquivos pelo JUPYTER NOTEBOOK
+# Criando Arquivos pelo JUPYTER NOTEBOOK - Essse comando funciona somente no JUPYTER NOTEBOOK - É um comando interno da ferramenta
 %%writefile arquivos/teste.txt
 ESTE TEXTO SERÁ ADICIONADO AO ARQUIVO CRIADO
 
