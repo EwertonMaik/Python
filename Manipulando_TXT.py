@@ -22,3 +22,23 @@ conteudo = arquivo.read()
 arquivo.close()
 
 print(conteudo)
+
+# Utilizando a expressão WITH na abertuda de arquivos - Obs, executa automáticamente o método close
+# É aberto ou criado o arquivo caso não exista, e dado uma alias que chama a função read e salva na variável conteúdo
+with open('arquivos/cientista.txt','r') as arquivo: # r - Modo Reader
+    conteudo = arquivo.read()
+
+print(conteudo)
+
+# Abrindo em modo w - Writer e gravando o conteúdo da váriavel texto por partes/ fatias usando slice
+with open('arquivos/cientista.txt','w') as arquivo:
+    arquivo.write(texto[:21]) # Grava da posição 0 até a 21
+    arquivo.write('\n')
+    arquivo.write(texto[:33])
+
+# Realizado a abertuda e leitura do arquivo, e logo após imprimindo
+arquivo = open('arquivos/cientista.txt','r')
+conteudo = arquivo.read()
+arquivo.close()
+
+print (conteudo)
