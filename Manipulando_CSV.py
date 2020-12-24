@@ -22,3 +22,15 @@ for x in leitor:
 # Código alternativo para eventuais problemas com linhas em branco no arquivo
 with open('arquivos/numeros.csv','r', encoding='utf8', newline = '\r\n') as arquivo:
 
+# Transformando os dados do arquivo CSV em uma Lista no Python
+with open('arquivos/numeros.csv','r') as arquivo: # Aberto modo r -read - leitura
+  leitor = csv.reader(arquivo) # Váriavel recebe conteúdo da leitura do csv
+  dados = list(leitor) # Função que os dados em uma LISTA
+  
+print(dados) # Imprimindo a LISTA
+
+# Segunda forma de imprimir em uma Lista - Usando FOR e a variável dados usada no bloco anterior
+# É usado Slice para iniciar a leitura e respectivamente a impressão a partir da posição 1
+for linha in dados[1:]:
+  print(linha)
+
