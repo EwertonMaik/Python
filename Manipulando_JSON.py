@@ -30,3 +30,33 @@ with open('arquivos/dados.json','r') as arquivo:
 print(data) # Imprime todo o conjunto de chaves/valores
 print(data['nome']) # Imprime só o valor da chave = nome
 
+# Obtendo dados de um arquivo json da Internet
+from urllib.request import urlopen # Importação da biblioteca
+
+response = urlopen("http://vimeo.com/api/v2/video/57733101.json").read().decode('utf8')
+data = json.loads(response)[0]
+print(data) # Imprimindo do o conjunto de chaves/valores
+print(data['title']) # Imprimindo apenas o valor da chave title
+
+# Pegando Dados de um JSON e Escrevendo um em TXT
+import os
+
+arquivo_fonte = 'arquivos/dados.json'
+arquivo_destino = 'arquivos/json_data.txt'
+
+# Usando modo 01 - Abertuda do 1º arquivo em modo read e abertura do 2º arquivo em modo write
+with open(arquivo_fonte,'r') as infile:
+    text = infile.read()
+    with open(arquivo_destino,'w') as outfile:
+        outfile.write(text)
+
+# usando modo 02 - Abertuda do 1º arquivo em modo WRITE e abertura do 2º arquivo em modo READ - Obs, concatenado tudo na mesma linha
+# Dentro do parâmetro do write é passado a abertuda do read
+open(arquivo_destino,'w').write(open(arquivo_fonte,'r').read()) 
+
+# Imprimindo arquivo TXT
+with open('arquivos/json_data.txt','r') as arquivo: # Realizado abertura em modo read
+    texto = arquivo.read() # Variável texto recebe a leitura do conteúdo
+    data = json.loads(texto) # Variável data carrega dados da variável teto em formato JSON
+print(data) # Imprimindo
+
