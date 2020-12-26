@@ -27,5 +27,6 @@ with open('arquivos/dados.json','r') as arquivo:
   texto = arquivo.read() # Variável texto recebe leitura do arquivo json
   data = json.loads(texto) # Variável data carrega os dados da variável texto em formato jason 
 
-print(data)
+print(data) # Imprime todo o conjunto de chaves/valores
+print(data['nome']) # Imprime só o valor da chave = nome
 
