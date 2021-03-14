@@ -40,7 +40,7 @@ import sys -- Pacote para interagir com Sistema Operacional
 sys.stdout.write('Teste')
 sys.version
 
-import urllib.request --Pacore para trabalhar com links web
+import urllib.request --Pacote para trabalhar com links web
 resposta = urllib.request.urlopen('http://python.org') -- Variável armazena objeto da página web
 print(resposta)
 html = resposta.read() -- Lê o código html da página e salva na variável
