@@ -70,3 +70,13 @@ print ('Ano:', var03.year)
 print ('Mês :', var03.month)
 print ('Dia :', var03.day)
 
+-- Definindo uma data manualmente para uma variável
+var04 = datetime.date(2015, 4, 28)
+print ('var04 : ', var04)
+
+-- Definindo uma data para variável var05, porém usando a função replace pegando a data da variável var04 e atualizando apenas o ano de 2015 para 2016
+var05 = var04.replace( year = 2016)
+print ('var05 : ', var05)
+
+-- Realizando operação de subtração de datas
+var05 - var04
