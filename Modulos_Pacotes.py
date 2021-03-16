@@ -45,3 +45,28 @@ resposta = urllib.request.urlopen('http://python.org') -- Variável armazena obj
 print(resposta)
 html = resposta.read() -- Lê o código html da página e salva na variável
 print(html)
+
+## Trabalhando com Datas
+import datetime
+
+var01 = datetime.datetime.now() -- Variável recebendo data e hora atual
+print(var01)
+
+var02 = datetime.time(8, 25, 55) -- Variável recebendo uma data configurada manualmente
+print(var02)
+
+-- Extraindo da variável var02 a hora, minutos, segundos e milisegundos individualmente
+print ('Hora  :', var02.hour)
+print ('Minute:', var02.minute)
+print ('Segundo:', var02.second)
+print ('Microsegundo:', var02.microsecond)
+
+print(datetime.time.min)
+-- Definindo uma variável para receber a data atual e logo extraindo Tempo, Ano, Mês e Dia
+var03 = datetime.date.today()
+print (var03)
+print ('ctime:', var03.ctime())
+print ('Ano:', var03.year)
+print ('Mês :', var03.month)
+print ('Dia :', var03.day)
+
