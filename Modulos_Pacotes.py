@@ -80,3 +80,36 @@ print ('var05 : ', var05)
 
 -- Realizando operação de subtração de datas
 var05 - var04
+
+## Pacote Map
+# Fahrenheit
+def fahrenheit(T):
+    return ((float(9)/5)*T + 32)
+
+# Celsius
+def celsius(T):
+    return (float(5)/9)*(T-32)
+  
+map(fahrenheit, temperaturas) -- 1º parâmetro é uma função criada anteriormente, que transforma os valores da lista do 2º parâmetro em temperatura Fahrenheit.
+list(map(fahrenheit, temperaturas)) -- É utilizado a função list para converter a operação anterior comentada em uma lista
+
+--Utilizando a mesma operação map anterior, porém em um for para imprimir os valores da lista
+for temp in map(fahrenheit, temperaturas):
+    print(temp)
+
+map(celsius, temperaturas) -- Utilizando map para converter um lista de valores em temperatura Celsius
+list(map(celsius, temperaturas)) -- Converte e imprime a lista de valores convertidos
+
+-- Realizando a operação anterior, porém com uma expressão Lambda
+map(lambda x: (5.0/9)*(x - 32), temperaturas) -- Realiza a conversão, no lugar da chamada função é escrito a expressão lambda
+list(map(lambda x: (5.0/9)*(x - 32), temperaturas))  -- Da mesma forma, utilizando a expressão lambda no lugar da função, realizado a impressão
+
+-- Realizando operações com lista através de expressões Lambda
+a = [1,2,3,4]
+b = [5,6,7,8]
+list(map(lambda x , y : x + y, a, b)) -- Imprimindo a lista
+
+a = [1,2,3,4]
+b = [5,6,7,8]
+c = [9,10,11,12]
+list(map(lambda x, y, z : x + y + z, a, b, c))
