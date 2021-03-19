@@ -113,3 +113,29 @@ a = [1,2,3,4]
 b = [5,6,7,8]
 c = [9,10,11,12]
 list(map(lambda x, y, z : x + y + z, a, b, c))
+
+--Programação Funcional - Programação Orientada à Expressão
+map(Função, Sequência)
+reduce(Função, Sequência)
+lambda
+list comprehension
+
+## Utilizando a função REDUCE do pacote functools
+from functools import reduce
+
+-- Função manual para para somar valores
+lista [10, 20 ,30, 40, 50]
+
+def soma(a,b): -- Criando Função manual
+    x = a + b
+    return x
+
+reduce(soma, lista) -- Chamando a função reduce que recebe como primeiro parâmetro, a entrada da função soma, que é aplicado ao segundo parâmetro, somando cada item conforme a função.
+reduce(lambda x, y : x  + y, lista) -- Mesma chamada do anterior, porém no lugar da função soma é utilizado uma expressão lambda.
+max_find = lambda a, b : a if (a > b) else b -- Expressão Lambda, porém salva em uma variável
+type (max_find) -- Função que apresenta o tipo da função
+
+reduce(max_find, lista)
+
+
+
