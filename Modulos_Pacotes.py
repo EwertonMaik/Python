@@ -155,8 +155,26 @@ list(filter(verificaPar, lista)) -- Convertendo o resultado final para uma lista
 list(filter(lambda x : x % 2 == 0, lista)) -- Possível utilizar no lugar da função verificaPar - uma expressão lambda diretamente
 list(filter(lambda num : num > 8, lista)) -- Utilizando uma expressão Lambda para tratar outra situação, trás todos os números maiores que 8
     
-    
+## List Comprehension -- Recurso Python mais performatico que MAP, RECUDE, FILTER e Expressões LAMBDA
+lst = [x for x in 'Laranja'] -- Cria uma lista onde cada caracter da palavra laranja é uma posição dentro da variável lst
+print(lst) -- Imprimindo
+type(lst) -- Exibindo tipo da variávlel
 
+lst = [x**2 for x in range(0, 11)] -- Eleva a potência de 2 para cada valor da lista criada pelo range de 0 até 11
+print(lst)
+
+lst = [x for x in range(11) if x % 2 == 0] -- Para cada valor da lista criada com range, é retornado apenas os números pares, que atendem a condição IF
+print(lst)
+
+celsius = [0,10,20.1,34.5] -- Criado uma Lista que contêm valores em temperatura Celsius
+fahrenheit = [ ((float(9)/5) * temp + 32) for temp in celsius ] -- Utilizando List Comprehension, é aplicado uma expressão que converte o valor da temperatura Celsius para Fahrenheit
+A primeira parte é uma expressão que tem um parâmetro que faz referência a cada valor da lista Celsius.
+
+print(fahrenheit)
+
+-- Realizando uma operação Aninhada com List Comprehension / é elevado a potência de 2, uma lista que também está sendo elevada a potência de 2, gerada por um range
+lst = [ x**2 for x in [x**2 for x in range(11)]]
+print(lst)
 
 
 
