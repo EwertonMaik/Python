@@ -137,5 +137,26 @@ type (max_find) -- Função que apresenta o tipo da função
 
 reduce(max_find, lista)
 
+## Utilizando a função FILTER do pacote
+--Função para aplicar um filtro com uma determinada regra em uma sequencia de valores
+filter(funcao, sequencia) -- Retornar um Iterator
+
+# Criando uma função para calcular se um número é par ou impar, retornar um tipo booleano
+def verificaPar(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+    
+verificaPar(50) -- Chamando a função para verificar se o número do parâmetro é par ou impar
+lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] -- Criando uma lista para ser utilizada
+filter(verificaPar, lista) -- Utilizando a função filter para aplicar a função verificaPar na lista de valores - Valor retornado é um Iterator
+list(filter(verificaPar, lista)) -- Convertendo o resultado final para uma lista para poder ser visualizada
+list(filter(lambda x : x % 2 == 0, lista)) -- Possível utilizar no lugar da função verificaPar - uma expressão lambda diretamente
+list(filter(lambda num : num > 8, lista)) -- Utilizando uma expressão Lambda para tratar outra situação, trás todos os números maiores que 8
+    
+    
+
+
 
 
