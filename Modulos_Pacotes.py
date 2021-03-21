@@ -213,9 +213,37 @@ def trocaValores(d1, d2):
     
     return dicTemp
 
+trocaValores(d1, d2) -- Chamando a função
 
+-- ## Enumerate
+# Criando uma lista
+seq = ['a','b','c']
+enumerate(seq) -- Retorna uma Enumerator
+list(enumerate(seq)) -- Converte o Enumerator para lista, para ser exibido em lista
 
+-- Utilizando um FOR e ENUMERATE para percorrer toda sequencia e imprimir sua CHAVE / VALOR, apelidados como indice / valor
+for indice, valor in enumerate(seq):
+    print (indice, valor)
 
+-- Utilizando exemplo anterior, porem com uma condição if, que sai do loop for, quando o indice for maior ou igual a 2
+for indice, valor in enumerate(seq):
+    if indice >= 2:
+        break
+    else:
+        print (valor)
 
+-- Criando uma lista de Strings, que também é uma sequencia dentro do PYTHON
+lista = ['Marketing', 'Tecnologia', 'Business']
 
+-- Como exemplo posterior, utilizando FOR para percorrer e imprimir a sequencia
+for chave, valor in enumerate(lista):
+    print(chave, valor)
+
+-- Utilizando FOR para percorrer e imprimir a sequencia da String
+for chave, valor in enumerate('Isso é uma string'):
+    print(chave, valor)
+
+-- Utilizando FOR para percorrer e imprimir a sequencia criada usando RANGE - Cria a lista com 10 valores
+for i, item in enumerate(range(10)):
+    print(i, item)
 
