@@ -176,5 +176,46 @@ print(fahrenheit)
 lst = [ x**2 for x in [x**2 for x in range(11)]]
 print(lst)
 
+-- ## Utilizando ZIP e ENUMERATE
+
+zip(sequencia, sequencia) -- Agrega valores de duas sequencias e retorna uma tupla
+enumerate(sequencia) -- Retorna o indice e valor de cada
+
+# Criando duas listas
+x = [1,2,3]
+y = [4,5,6]
+
+zip(x, y) -- Unindo as duas listas, retorna um Iterator
+list(zip(x,y)) -- Convertendo o Iterator para ser exibido em uma lista
+
+list(zip('ABCD', 'xy')) -- Unindo duas sequencias de caracteres, as tuplas montadas seram sempre com a quantidade da sequencia menor
+
+a = [1,2,3]
+b = [4,5,6,7,8]
+
+list(zip(a, b)) -- Unindo duas sequencias de listas, as tuplas montadas seram sempre com a quantidade da sequencia menor
+
+# Criando 2 dicionários - Chave : Valor
+d1 = {'a': 1,'b': 2}
+d2 = {'c': 4,'d': 5}
+
+list(zip(d1, d2)) -- Unindo as CHAVES dos Dicionários 
+list(zip(d1, d2.values())) -- Unindo a CHAVE do Dicionário d1, com o VALOR do dicionário d2
+
+-- Função armazenada que realiza a mesma operação do comando anterior, de UNIR a CHAVE do Dicionário d1, com o VALOR do dicionário d2
+-- Recebe como parâmetro os dois Dicionários, cria um Dicionário, e utilizndo um FOR, percorre as CHAVES de d1, e VALORES de d2 e salva no Dicionário criado
+-- Por fim retorna o Dicionario
+def trocaValores(d1, d2):
+    dicTemp = {}
+    
+    for d1key, d2val in zip(d1,d2.values()):
+        dicTemp[d1key] = d2val
+    
+    return dicTemp
+
+
+
+
+
 
 
