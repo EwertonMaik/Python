@@ -24,4 +24,15 @@ try:
 except TypeError:
     print("Operação não permitida")
 
-
+-- Utilizando TRY, EXCEPTION e ELSE
+-- No Bloco TRY é adicionado as linhas de código que devem ser executadas e podlem ocorrer um possível erro de exceção
+-- EXCEPTION é o bloco que é executado quando ocorre a Exceção
+-- ELSE é o bloco que é executado quando não ocorre Exceção, é bem sucedido. f.close() - fecha a conexão aberta com o arquivo
+try:
+    f = open('arquivos/testandoerros.txt','w')
+    f.write('Gravando no arquivo')
+except IOError:
+   print ("Erro: arquivo não encontrado ou não pode ser salvo.")
+else:
+   print ("Conteúdo gravado com sucesso!")
+   f.close()
