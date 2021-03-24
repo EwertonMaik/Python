@@ -61,4 +61,15 @@ else:
 finally:
    print ("Comandos no bloco finally são sempre executados!")
 
---
+-- A função abaixo, é criada e compilada com sucesso, porêm possue uma Exceção não tratada que obtem erro
+-- ValueError: invalid literal for int() with base 10: 'a'
+-- Todo caracter digitado com a entrada do input, é convertido para um INTEIRO
+-- Ao dar ENTER ou digitar uma entrada de letra, ou caracter que não seja número, o erro é obtido
+def askint():
+        try:
+            val = int((input("Digite um número: ")))
+        except UnboundLocalError:
+            print ("Você não digitou um número!")
+        finally:
+            print ("Obrigado!")
+        print (val) 
