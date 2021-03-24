@@ -73,3 +73,21 @@ def askint():
         finally:
             print ("Obrigado!")
         print (val) 
+
+-- Mesma função anterior criada, porém com a modifição melhorada, adicionado a estrutura de controle WHILE e CONTINUE, que fica repetindo continuamente,
+pedindo para o usuário digitar um caracter número corretamente, ou seja, digitou errado, cai na Exception e o CONTINUE repete o processo.
+def askint():
+    while True:
+        try:
+            val = int(input("Digite um número: "))
+        except:
+            print ("Você não digitou um número!")
+            continue
+        else:
+            print ("Obrigado por digitar um número!")
+            break
+        finally:
+            print("Fim da execução!")
+        print (val)
+
+--
