@@ -90,4 +90,18 @@ def askint():
             print("Fim da execução!")
         print (val)
 
---
+-- Neste exemplo é criado uma TUPLA, onde seu conteúdo não pode ser alterado e adicionado
+-- Dentro do bloco TRY é adicionado um instrução para aplicar uma append a tupla, logo isso obtem um erro
+-- E é possível adicionar mais de um Exception, justamente para tratar diferentes possiveis tipos de erro
+-- AttributeError - Classe que trata Exceções relacionadas a atributos, referências e atribuições
+-- IOError - Classe que trata Exceções relacionadas uma operação de IO - Input ou Output falha
+-- Erro:  'tuple' object has no attribute 'append'
+tuple = (1,2,3,4,5)
+try:
+    tuple.append(6)
+    for each in tuple:
+        print(each)
+except AttributeError as e:
+    print('Erro: ', e)
+except IOError as e:
+    print('Erro de I/O:', e)
