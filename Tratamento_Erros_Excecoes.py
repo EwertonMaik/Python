@@ -28,6 +28,7 @@ except TypeError:
 -- No Bloco TRY é adicionado as linhas de código que devem ser executadas e podlem ocorrer um possível erro de exceção
 -- EXCEPTION é o bloco que é executado quando ocorre a Exceção
 -- ELSE é o bloco que é executado quando não ocorre Exceção, é bem sucedido. f.close() - fecha a conexão aberta com o arquivo
+-- Esta código abaixo o aquivo existe e o processo é concluido com sucesso!
 try:
     f = open('arquivos/testandoerros.txt','w')
     f.write('Gravando no arquivo')
@@ -36,3 +37,28 @@ except IOError:
 else:
    print ("Conteúdo gravado com sucesso!")
    f.close()
+
+-- Assim como o código anterior, porém apenas sem a extensão do arquivo, e aberto apenas para leitura
+-- Este exemplo obtem o erro - "Erro: arquivo não encontrado ou não pode ser lido."
+try:
+    f = open('arquivos/testandoerros','r')
+except IOError:
+   print ("Erro: arquivo não encontrado ou não pode ser lido.")
+else:
+   print ("Conteúdo gravado com sucesso!")
+   f.close()
+
+-- Este proximo exemplo, é bem sucedido, e tem adicionado o bloco FINALLY, que é executado independente se houver um Exception, ou se não houver erro, sendo ELSE executado.
+-- O bloco FINALLY sempre é executado, muito usado para sempre fechar uma conexão que foi aberta ou algo importante que sempre deve ser executado
+try:
+    f = open('arquivos/testandoerros.txt','w')
+    f.write('Gravando no arquivo')
+except IOError:
+   print ("Erro: arquivo não encontrado ou não pode ser salvo.")
+else:
+   print ("Conteúdo gravado com sucesso!")
+   f.close()
+finally:
+   print ("Comandos no bloco finally são sempre executados!")
+
+--
