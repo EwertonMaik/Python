@@ -18,6 +18,7 @@ Desenvolvimento Linguagem Python
 - Operadores Relacionais (==, !=, >, <, >=, <= )
 - Operadores Atribuição (=, +=, -=, *=, /=, %=, **=, //=)
 - Operadores Lógicos (AND, OR, NOT)
+- Operador  mais (+) é usado para concatenação de Strings - print( str01 + " " + str02)
 
 ▶ Estrutura de Dados Tipos Objetos:
 - Listas são criados com [] - sequência e Mutável
