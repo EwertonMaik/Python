@@ -247,3 +247,24 @@ for chave, valor in enumerate('Isso é uma string'):
 for i, item in enumerate(range(10)):
     print(i, item)
 
+
+-- Utilizando um for, map e expressão Lambd para uma variável executar 2 funções criadas, uma que eleva para potência 2 e outra para pot~encia 3
+lista = [0, 1, 2, 3, 4]
+
+def square(x):
+        return (x**2)
+    
+def cube(x):
+        return (x**3)
+
+funcs = [square, cube]
+
+for i in lista:
+    valor = map(lambda x: x(i), funcs)
+    print(list((valor)))
+
+-- Exemplo usando uma Matriz e realizando uma transposição com List Comprehension
+matrix = [[1, 2],[3,4],[5,6],[7,8]]
+transpose = [[row[i] for row in matrix] for i in range(2)]
+print(transpose)
+
