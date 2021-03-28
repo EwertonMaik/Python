@@ -43,7 +43,35 @@ Golias = Cachorro(raca='Huskie') -- Mesmo exemplo anterior, porém outro objeto
 Rex.raca -- Consultando o valor do atribudo raca de cada Objeto criado
 Golias.raca
 
+## Tudo na Linguagem Python é orientado a objetos
+lst_num = ["Data", "Science", "Academy", "Nota", 10, 10] -- Criado uma lista que pertence a classe List, o interpretador sabe pela utilização das chaves
+type(lst_num) -- Consultando o tipo do Objeto criando anteriormente
 
+-- Utilizando o método print para consultar e imprimir o tipo de cada tipo de objetos do Python
+print(type(10)) -- INT - Inteiro
+print(type([])) -- LIST - Lista
+print(type(())) -- TUPLE - Tuplas
+print(type({})) -- DICT - Dicionário
+print(type('a')) -- SRT - String
 
+-- Criando uma classe Funcionarios para os exemplos seguintes
+class Funcionarios:
+    def __init__(self, nome, salario): -- Méptodo construtor que recebe 2 parâmetros
+        self.nome = nome
+        self.salario = salario
+
+    def listFunc(self): -- Método para Listar o Funcionário cadastrado
+        print("O nome do funcionário é " + self.nome + " e o salário é R$" + str(self.salario))
+-- FIM da classe
+
+Func1 = Funcionarios("Santos", 20000) -- Instância objeto da classe funcionário e atribuido um nome e salário do funcionário
+Func1.listFunc() -- Consultando dados inseridos anteriormente
+
+## Varios métodos do Python para gerenciar atributos
+hasattr(Func1, "nome") -- Método que pergunta para o objeto "Func1" se existe o atributo "nome" - Retorna TRUE ou FALSE
+hasattr(Func1, "salario") -- Mesmo exemplo anterior, porém para outro atributo
+setattr(Func1, "salario", 4500) -- Pergunta para o objeto se existe o atributo informado, caso exista, atribuido o novo salário de 4.500, caso não é criado e atribuido o valor
+getattr(Func1, "salario") -- Consultando ao Objeto Func1 o valor do atributo salário
+delattr(Func1, "salario") -- Deletando o atributo "salário" do objeto "func1"
 
 
