@@ -74,4 +74,38 @@ setattr(Func1, "salario", 4500) -- Pergunta para o objeto se existe o atributo i
 getattr(Func1, "salario") -- Consultando ao Objeto Func1 o valor do atributo salário
 delattr(Func1, "salario") -- Deletando o atributo "salário" do objeto "func1"
 
+## Herença
+-- O exemplo a seguir demonstra a utilização de Heraça de uma classe especifica herdando atributos de uma classe genérica
+-- Classe Animal e Classe Cachorro
+
+class Animal(): -- ANIMAL
+    def __init__(self): -- Método Construtor
+        print("Animal criado")
+
+    def Identif(self): -- Método de Identificação
+        print("Animal")
+
+    def comer(self): -- Método comum entre todos animais
+        print("Comendo")
+
+-- Classe CACHORRO que herda da Classe ANIMAL
+class Cachorro(Animal):
+    def __init__(self): -- Método construtor
+        Animal.__init__(self) -- Dentro do método construtor é chamado e inicializado o método construtor da classe animal
+        print("Objeto Cachorro criado")
+
+    def Identif(self): -- Método pessoal da classe cachorro
+        print("Cachorro")
+
+    def latir(self): -- Método pessoal da classe cachorro
+        print("Au Au!")
+
+-- Objeto rex instânciado da classe Cachorro, pode utilizar de seus métodos internos pessoais, e também os métodos da classe Animal
+rex = Cachorro()
+rex.Identif()
+rex.latir()
+rex.comer()
+
+## Python possui diversos métodos especiais com a sintaxe de (__) no início e fim e o nome do método ao meio.
+__init__ -- Método de inicialização ao criar uma classe
 
