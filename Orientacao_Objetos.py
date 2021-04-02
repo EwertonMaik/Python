@@ -110,24 +110,29 @@ rex.comer()
 __init__ -- Método de inicialização ao criar uma classe
 
 class Livro(): -- Classe livro criada, contendo o método especial __init__ / __str__ e __len__
-    def __init__(self, titulo, autor, paginas): -- Método especial de inicialização de 
+    def __init__(self, titulo, autor, paginas): -- Método especial de inicialização da classe
         print ("Livro criado")
         self.titulo = titulo
         self.autor = autor
         self.paginas = paginas
                 
-    def __str__(self):
+    def __str__(self): -- Método Especial __str__, é chamado internamento pelo Python, quando é utilizado o método (print)
         return "Título: %s , autor: %s, páginas: %s " \
     %(self.titulo, self.autor, self.paginas)
 
-    def __len__(self):
+    def __len__(self): -- Método Especial __len__, é utilizado para retornar o tamanho da string
         return self.paginas
     
     def len(self):
         return print("Páginas do livro com método comum: ", self.paginas)
 
 
-
+livro1 = Livro("Os Lusíadas", "Luis de Camões", 8816) -- Instânciado um objeto da classe livro e chamado alguns métodos
+print(livro1)
+str(livro1)
+len(livro1)
+livro1.len()
+del livro1.paginas -- Deleta o valor definido para o atributo páginas
 
 
 
