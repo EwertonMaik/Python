@@ -109,3 +109,39 @@ rex.comer()
 ## Python possui diversos métodos especiais com a sintaxe de (__) no início e fim e o nome do método ao meio.
 __init__ -- Método de inicialização ao criar uma classe
 
+class Livro(): -- Classe livro criada, contendo o método especial __init__ / __str__ e __len__
+    def __init__(self, titulo, autor, paginas): -- Método especial de inicialização de 
+        print ("Livro criado")
+        self.titulo = titulo
+        self.autor = autor
+        self.paginas = paginas
+                
+    def __str__(self):
+        return "Título: %s , autor: %s, páginas: %s " \
+    %(self.titulo, self.autor, self.paginas)
+
+    def __len__(self):
+        return self.paginas
+    
+    def len(self):
+        return print("Páginas do livro com método comum: ", self.paginas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
