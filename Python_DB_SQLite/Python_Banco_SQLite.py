@@ -1,4 +1,5 @@
-# Site Ooficial de Documentação do Banco SQLite - https://www.sqlite.org/index.html
+# Site Oficial de Documentação do Banco SQLite - https://www.sqlite.org/index.html
+# Site Oficial da Ferramenta para visualização e Gerenciamento do Banco SQLite - https://sqlitebrowser.org/
 # Este banco é instalado automaticamente com a instalação do Anaconda
 
 # Importamndo módulo de acesso de arquivos do sistema operacional e removendo arquivo caso ele exista já criado
