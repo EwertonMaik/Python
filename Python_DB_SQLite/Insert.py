@@ -28,3 +28,12 @@ def data_insert():
 # Chamando a função para criação da TABELA e INSERT
 create_table()
 data_insert()
+
+
+# Criando outra Função para aplicar uma INSERT, porém é passado os valores do VALUES como váriaveis
+def data_insert_var():
+    new_date = datetime.datetime.now() -- Váriável que irá receber a data e a hora sempre a cada iteração
+    new_prod_name = 'Monitor' -- Neste caso, a váriavel do nome do produto está fixa, porém poderia estar buscando de outro local
+    new_valor = random.randrange(50,100) -- Aqui é gerado um valor randomico para cada iteração, mas poderia estar buscando o valor em outro local
+    cur.execute("INSERT INTO produtos (date, prod_name, valor) VALUES (?, ?, ?)", (new_date, new_prod_name, new_valor)) -- Cursor realizando a execução da iteração
+    conn.commit() -- Aplicando commit
