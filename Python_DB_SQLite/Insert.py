@@ -23,3 +23,8 @@ def data_insert():
     conn.commit() -- Sempre importante aplicar o commit para não ter transação em aberto e o dado não confirmado no banco
     cur.close()   -- Sempre importante fechar a conexão do Cursor
     conn.close()  -- Sempre importante fechar a conexão do objeto Connect SQLite
+
+
+# Chamando a função para criação da TABELA e INSERT
+create_table()
+data_insert()
