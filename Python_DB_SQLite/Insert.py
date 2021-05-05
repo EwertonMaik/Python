@@ -37,3 +37,12 @@ def data_insert_var():
     new_valor = random.randrange(50,100) -- Aqui é gerado um valor randomico para cada iteração, mas poderia estar buscando o valor em outro local
     cur.execute("INSERT INTO produtos (date, prod_name, valor) VALUES (?, ?, ?)", (new_date, new_prod_name, new_valor)) -- Cursor realizando a execução da iteração
     conn.commit() -- Aplicando commit
+
+# Utilizando a estrutura de controle FOR para iterar de i até o range de 10
+# Para cada Iteração é chamado e executado a função de insert com variável e executado do pacote time o sleep, para aguardar 1 segundo após cada execução do INSERT
+for i in range(10):
+    data_insert_var()
+    time.sleep(1)
+
+cur.close() -- Encerrando Cursor
+conn.close() -- Encerrando Conexão
