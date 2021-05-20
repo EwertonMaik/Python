@@ -52,5 +52,14 @@ db.mycollection.insert_one(doc2)
 for rec in db.mycollection.find():
     print(rec)
 
-# Criando uma nova
+# Criando uma variável que tem acesso / conexão a COLLECTION - mycollection
 col = db["mycollection"]
+
+# Utilizando a função type para verificar o tipo da variável
+type(col)
+
+# Função que retorna a quantidade de documentos da coleção
+col.count()
+
+# Criando uma váriavel que recebe a pesquisa de um documento da coleção
+redoc = col.find_one()
