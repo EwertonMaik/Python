@@ -34,3 +34,7 @@ Desenvolvimento Linguagem Python
 - seek()       - Retorna inicio arquivo
 - readlines()  - Retorja a lista de linhas arquivo
 - close()      - Fecha arquivo
+
+▶ Numby - Numerical Python:
+- Pacote Python utilizado na computação Matemática, com suporte a Arrays e Matrizes, provenientes dos pacotes Numeric e Numarray
+- Operações com Álgebra Linear e  Integração com C, C++ e Fortran
