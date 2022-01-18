@@ -33,3 +33,38 @@ dadosRH.groupby(['educacao']).count() # Realiza um Agrupamento pela coluna educa
 sns.countplot(dadosRH[educacao]) # Cria um Grafico de Barras com a coluna educacao
 dadosRH.groupby(['aval_ano_anterior']).count()
 sns.countplot(dadosRH[aval_ano_anterior])
+
+dadosRH['educacao'].fillna(dadosRH['educacao'].mode()[0], inplace = True) # Preenche valores ausentes com o valor do calculo da moda
+dadosRH['aval_ano_anterior'].fillna(dadosRH['aval_ano_anterior'].median(), inplace = True) # Preenche valores ausentes com o valor do calculo da mediana
+dadosRH.isnull().sum()
+dadosRH.groupby(['educacao']).count()
+dadosRH.groupby([aval_ano_anterior]).count()
+
+dadosRH.groupby(['promovido']).count()
+sns.countplot(dadosRH['promovido'])
+df_classe_majoritaria = dadosRH[dadosRH.promovido == 0]
+df_classe_minoritaria = dadosRH[dadosRH.promovido == 1]
+df_classe_majoritaria.shape
+df_classe_minoritaria.shape
+
+# Técnica - Upsample
+# Upsample da classe minoritaria - Exemplo de balanceamento entre valores - conjunto de dados
+# Cria amostragem dos dados
+from sklearn.utils import resample
+df_classe_minoritaria_upsampled = resample(df_classe_minoritaria,
+                                           replace = True,
+                                           n_samples = 50140,
+                                           random_state = 150)
+                                           
+
+dadosRH_balanceados = pd.concat([df_classe_majoritaria, df_classe_minoritaria_upsampled]) # Concatenando os valores das classes / variaveis
+dadosRH_balanceados.promovido.value_counts() # Contando o total de registros da coluna promovido
+dadosRH_balanceados.info() # Informações de totas variáveis do conjunto de dados
+sns.countplot(dadosRH_balanceados['promovido']) # Criando Grafico novamente
+
+# Salvando os dados balanceados em disco
+dadosRH_balanceados.to_csv('dadosRH_modificado.csv', encoding = 'utf-8', index = False)
+
+dataset = pd.read_csv(''dadosRH_modificado.csv')
+dataset.head()
+dataset.shape
