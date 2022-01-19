@@ -68,3 +68,28 @@ dadosRH_balanceados.to_csv('dadosRH_modificado.csv', encoding = 'utf-8', index =
 dataset = pd.read_csv(''dadosRH_modificado.csv')
 dataset.head()
 dataset.shape
+
+# Pergunta 1 - Qual a correlação entre os atributos dos funcionarios
+import matplotlib.pyplot as pl
+import seaborn as sns
+corr = dataset.corr()
+sns.headmap(corr, cmap = "Y10rRd", linewidths = 0.1)
+plt.show()
+
+# Pergunta 2 - Qual o tempo de serviço da maioria dos funcionarios
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.distplot(dataset['tempo_servico'], color = 'green')
+plt.title('Distribuição do Tempo de Serviço dos Funcionários', fontsize = 15)
+plt.xlabel('Tempo de Serviço em Anos', fontsize = 15)
+plt.ylabel('Total')
+plt.show()
+
+# Pergunta 3 - Qual avaliação do ano anterior foi mais comum
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset['aval_ano_anterior'].value_counts().sort_values().plot.bar(color = 'blue', figsize = (10, 5) )
+plt.title('Distribuição da Avaliação do Ano anterior dos Funcionários', fontsize = 15)
+plt.xlabel('Avaliações', fontsize = 15)
+plt.ylabel('Total')
+plt.show()
