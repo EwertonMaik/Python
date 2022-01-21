@@ -93,3 +93,49 @@ plt.title('Distribuição da Avaliação do Ano anterior dos Funcionários', fon
 plt.xlabel('Avaliações', fontsize = 15)
 plt.ylabel('Total')
 plt.show()
+
+# Pergunta 4 - Qual a distribuição das idades dos funcionarios
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.distplot(dataset['idade'], color = 'magenta')
+plt.title('Distribuição da Idade dos Funcionários', fontsize = 15)
+plt.xlabel('Idade', fontsize = 15)
+plt.ylabel('Total')
+plt.show()
+
+Pergunta 5 - Qual o Número de Treinamentos mais frequente
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.violinplot(dataset['numero_treinamentos'], color = 'red')
+plt.title('Número de Treinamentos Feitos Pelos Funcionarios', fontsize = 15)
+plt.xlabel('Número de Treinamentos', fontsize = 15)
+plt.ylabel('Frequencia')
+plt.show()
+
+-- Pergunta 6 - Qual a Proporção dos Funcionários Por Canal de Recrutamento
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset['canal_recrutamento'].value_counts()
+fatias  = [55375, 42358, 2547]
+labels  = "Outro","Outsourcing","Indicação"
+colors  = ['purple', 'lime', 'yellow']
+explode = [0, 0, 0]
+plt.pie(fatias, labels = labels, colors = colors, explode = explode, shadow = True, autopct = "%.2f%%")
+plt.title('Percentual de Funcionarios Por Canal de Recrutamento', fontsize = 15)
+plt.axis('off')
+plt.legend()
+plt.show()
+
+-- Pergunta 7 - Qual a Relação Entre a Promoção e a Avaliação do Ano Anterior
+import matplotlib.pyplot as plt
+import seaborn as sns
+data = pd.crosstab(dataset['aval_ano_anterior'], dataset['promovido'] )
+data.div(data.sum(1).astype(float), axis = 0 ).plot(kind    = 'bar',
+                                                    stacked = True,
+                                                    figsize = (16, 9),
+                                                    color   = ['blue', 'magenta']
+                                                    )
+plt.title('Relação Entre Avaliação do Ano Anterior e a Promoção', fontsize = 15)
+plt.xlabel('Avaliação do Ano Anterior', fontsize = 15)
+plt.legend()
+plt.show()
