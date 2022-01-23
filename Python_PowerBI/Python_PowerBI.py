@@ -2,13 +2,23 @@
 
 Biblioteca Python para Analise de Dados (Py Data Stack)
 
-matplotlib - https://matplotlib.org
- 
-seaborn - https://seaborn.pydata.org
+Matplotlib
+https://matplotlib.org/
 
-pandas - pandas.pydata.org - Excel
+Seaborn
+https://seaborn.pydata.org/
 
-numpy - numpy.org - Operações matemática de dados
+Pandas
+https://pandas.pydata.org/
+
+NumPy - Operações matemática de dados
+https://numpy.org/
+
+Comunidade DSA
+https://www.datascienceacademy.com.br/social
+
+Anaconda Python
+https://www.anaconda.com
 
 Instalação do Interpretador Python
 anaconda.com (Possui o Interpretador + biblioteca dos pacotes Python)
