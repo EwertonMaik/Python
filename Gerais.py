@@ -25,7 +25,8 @@ print(varString)
 # Operações Aritiméticas
 2 + 2  # SOMA
 10 - 5 # SUBTRAÇÃO
-20 / 2 # DIVISÃO
+20 / 2 # DIVISÃO - Uma barra, sempre retorna um INTEIRO
+20 // 2.0 # DIVISÃO - Duas barras, sempre retorna um Float
 6 ** 2 # POTÊNCIA
 10 % 2 # MÓDULO (RESTO DA DIVISÃO)
 
