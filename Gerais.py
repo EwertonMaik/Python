@@ -58,6 +58,10 @@ pow(5, 2) # Retorna potência
 # Declaração Multipla de Variável
 var01, var02, var03 = "Jose", "Carlos", "Silva"
 
+# Imprime i Tipo da Vaáriavel
+var_teste = 2
+type(var_teste)
+
 # Cálculo entre variáveis
 largura = 2
 altura = 4
