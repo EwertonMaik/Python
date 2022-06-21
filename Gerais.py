@@ -1,5 +1,9 @@
 # Instruções Gerais
 
+# Verificando versões do Python e Conda
+python --version
+conda --version
+
 # Iniciando o Anaconda Navigator via linha de comando
 anaconda-navigator
 
