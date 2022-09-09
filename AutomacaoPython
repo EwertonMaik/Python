@@ -1,0 +1,91 @@
+-- Automação com Python
+
+!pip install pyautogui
+
+import pyautogui
+import pyperclip
+import time
+
+pyautogui.PAUSE = 1
+
+# Passo 1: Entrar no sistema (no nosso caso vai ser entrar no link)
+pyautogui.hothey("ctrl", "t")
+pyperclip.copy("https://drive.google.com/drive/folders/...")
+pyaoutogui.hotkey("ctrl", "v")
+pyautogui.press("enter")
+
+# Site Carregando
+time.sleep(5)
+
+# Codigo para pegar a posicao x e y do clique do mouse
+pyautogui.position(x=1073, y=725, clicks=2)
+time.sleep(2)
+
+# Passo 2: Navegar no sistema e encontrar a base de dados (entrar na pasta Exportar)
+pyautogui.click(x=1073, y=725, clicks=2)
+time.sleep(2)
+
+# Passo 3: download da Base de Dados
+pyautogui.click(x=1074, y=842) # clicou no arquivo
+pyautogui.click(x=3265, y=413) # clicou nos pontos
+pyautogui.click(x=2773, y=1527) # faz download
+time.sleep(7)
+
+# Passo 4: Calcular os indicadores (faturamento, quantidade de produtos)
+import pandas
+
+tabela = pandas.read_excel(r"C:\Users\joao1\Downloads\Vendas - Dez.xlsx")
+display(tabela)
+
+quantidade = tabela["Quantidade"].sum()
+faturamento = tabela["Valor Final"].sum()
+print(quantidade)
+print(faturamento)
+
+
+# Passo 5: Entrar no email
+pyautogui.hotkey("ctrl", "t") # abrir uma nova aba
+pyperclip.copy("mail.google.com.br/mail/u/0/#inbox") # copiando o link
+pyautogui.hotkey("ctrl", "v")
+pyautogui.press("enter")
+time.sleep(7)
+
+
+# Passo 6: Mandar um email para a diretoria com os indicadores
+
+# clicar no botao +
+pyautogui.click(x=84, y=432)
+time.sleep(2)
+
+# escrever o destinatario (para quem eu vou mandar)
+pyaautogui.write("destinatario@gmail.com") # escrever o destinatario
+pyautogui.press("tab") # selecionar o email
+pyautogui.press("tab") # passar pro campo de assunto
+
+# escrever o assunto
+pyperclip.copy("Relatório de Vendas")
+pyautogui.hotkey("ctrl", "v")
+pyautogui.press("tab") # passar para o corpo do email
+
+# escrever o corpo do email
+texto = f"""
+Prezados, bom dia!
+
+R$ {faturamento:,.2f}
+{quantidade:,}
+...
+"""
+
+pyperclip.copy(texto)
+pyautogui.hotkey("ctrl", "v")
+
+# enviar o email
+pyautogui.hotkey("ctrl", "enter")
+
+### Implementar o processo para ficar agendado
+
+Executar Código em Python Automaticamente (Diariamente, Semanalmente)
+https://www.youtube.com/watch?v=SxEjHAlCqmo
+
+Como Transformar Arquivo Python em Executável - [Arquivo Executável]
+https://www.youtube.com/watch?v=cGSerUmK0CE
