@@ -11,7 +11,7 @@ pyautogui.PAUSE = 1
 # Passo 1: Entrar no sistema (no nosso caso vai ser entrar no link)
 pyautogui.hothey("ctrl", "t")
 pyperclip.copy("https://drive.google.com/drive/folders/...")
-pyaoutogui.hotkey("ctrl", "v")
+pyautogui.hotkey("ctrl", "v")
 pyautogui.press("enter")
 
 # Site Carregando
