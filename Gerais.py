@@ -1,5 +1,10 @@
 # Instruções Gerais
 
+# Instalar pacote PIP
+sudo apt-get update
+sudo apt-get install python-pip
+pip --version
+
 # Verificando a Versão do Python e o Jupyter Notebook - Dentro do Jupyter Notebook
 !python3 --version
 !jupyter --version
