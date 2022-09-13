@@ -1,5 +1,9 @@
 # Instruções Gerais
 
+# Verificando a Versão do Python e o Jupyter Notebook - Dentro do Jupyter Notebook
+!python3 --version
+!jupyter --version
+
 # Verificando versões do Python e Conda
 python --version
 conda --version
