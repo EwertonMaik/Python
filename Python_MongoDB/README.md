@@ -1,3 +1,4 @@
+# ![Logo](docs/leaf.svg) MongoDB README
 # Banco de Dados NoSQL - MongoDB - Gerenciamento de Documentos
 
 # Comparação:
