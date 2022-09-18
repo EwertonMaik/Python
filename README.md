@@ -1,4 +1,4 @@
-# 🐍 Python 3.8
+# 🐍 Python
 Desenvolvimento Linguagem Python
 - Para Analise de Dados & Data Science
 
