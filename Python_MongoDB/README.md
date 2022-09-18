@@ -1,5 +1,8 @@
-# ![Logo](docs/leaf.svg) MongoDB README
 # Banco de Dados NoSQL - MongoDB - Gerenciamento de Documentos
+
+- mongod - The database server.
+- mongos - Sharding router.
+- mongo - The database shell (uses interactive javascript).
 
 # Comparação:
 # MongoDB                         RDBMS
