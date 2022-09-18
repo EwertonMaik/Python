@@ -1,5 +1,10 @@
 -- Importando pacote OS e utilizando a função remove para remove-lo caso exista
 import os
+import sqlite3
+import time
+import datatime
+
+
 os.remove("dsa.db") if os.path.exists("dsa.db") else None
 
 -- Importando pacote sqlite3 para acesso e manipulação ao Banco SQLite
@@ -32,10 +37,10 @@ data_insert()
 
 # Criando outra Função para aplicar uma INSERT, porém é passado os valores do VALUES como váriaveis
 def data_insert_var():
-    new_date = datetime.datetime.now() -- Váriável que irá receber a data e a hora sempre a cada iteração
-    new_prod_name = 'Monitor' -- Neste caso, a váriavel do nome do produto está fixa, porém poderia estar buscando de outro local
-    new_valor = random.randrange(50,100) -- Aqui é gerado um valor randomico para cada iteração, mas poderia estar buscando o valor em outro local
-    cur.execute("INSERT INTO produtos (date, prod_name, valor) VALUES (?, ?, ?)", (new_date, new_prod_name, new_valor)) -- Cursor realizando a execução da iteração
+    new_date = datetime.datetime.now()        # Váriável que irá receber a data e a hora sempre a cada iteração
+    new_prod_name = 'Monitor'                 # Neste caso, a váriavel do nome do produto está fixa, porém poderia estar buscando de outro local
+    new_valor = random.randrange(50,100)      # Aqui é gerado um valor randomico para cada iteração, mas poderia estar buscando o valor em outro local
+    cur.execute("INSERT INTO produtos (date, prod_name, valor) VALUES (?, ?, ?)", (new_date, new_prod_name, new_valor)) # Cursor realizando a execução da iteração
     conn.commit() -- Aplicando commit
 
 # Utilizando a estrutura de controle FOR para iterar de i até o range de 10
