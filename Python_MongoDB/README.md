@@ -5,7 +5,7 @@
 - mongo - The database shell (uses interactive javascript).
 
 # Comparação:
-# MongoDB                         RDBMS
+- MongoDB                         RDBMS
 - Batabase                        Database
 - Collection                      Tabela
 - Document                        Linha / Tupla
