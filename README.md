@@ -41,6 +41,6 @@ Desenvolvimento Linguagem Python
 - Array Numpy são homogêneos, estáticos, eficiente no uso de memória
 
 ▶ Conexões a Fontes e Banco de Dados com Python 
-- SQLite
-- MongoDB
-- PowerBI
+- SQLite  - https://github.com/EwertonMaik/Python/tree/main/Python_DB_SQLite
+- MongoDB - https://github.com/EwertonMaik/Python/tree/main/Python_MongoDB
+- PowerBI - https://github.com/EwertonMaik/Python/tree/main/Python_PowerBI
