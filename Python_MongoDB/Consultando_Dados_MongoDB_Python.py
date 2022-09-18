@@ -63,3 +63,5 @@ col.count()
 
 # Criando uma váriavel que recebe a pesquisa de um documento da coleção
 redoc = col.find_one()
+
+redoc
