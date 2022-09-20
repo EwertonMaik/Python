@@ -35,6 +35,8 @@ sns.set_theme(style = "whitegrid")
 # Carregando os Dados
 # Primeiro temos que baixar os dados!
 
+# Comando para ver o quanto tempo uma celula ficou executando
+# E comando de sistema operacional para baixar e instalar o dados IMDB
 %%time
 !imdb-sqlite
 
@@ -44,5 +46,20 @@ conn = sqlite3.connect('imdb.db')
 # Extrai a lista de tabelas
 tabelas = pd.read_sql_query("SELECT NAME AS 'Table_Name' FROM sqlite_master WHERE type = 'table' ", conn)
 
+# Tipo do Objeto
+type(tabelas)
 
+# Visualização do Resultado - Lista apenas alguns registros
+tabelas.head()
 
+# Converte o DataFrame em uma Lista
+tabelas = tabelas["Table_Name"].values.tolist()
+
+# Percorre a lista de tabelas no banco de dados e extrai o esquema de cada um
+for tabela in tabelas:
+    consulta = "PRAGMA TABLE_INFO({})".format(tabela)
+    resultado = pd.read_sql_query(consulta, conn)
+    print("Esquema da tabela : ", tabela)
+    display(resultado)
+    print("-" * 100)
+    print("\n")
