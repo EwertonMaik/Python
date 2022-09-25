@@ -161,3 +161,20 @@ type(bag_generos)
 
 # Retorna gêneros únicos
 generos_unicos = vetor.get_feature_names()
+
+# Cria o dataFrame de gêneros
+generos = pd.DataFrame(bag_generos.todense(), columns = generos_unicos, index = temp.index)
+
+# Visualizando
+generos.info()
+
+# Drop da coluna n
+generos = generos.drop(columns = 'n', axis = 0)
+
+# Calcula o Percentual
+generos_percentual = 100 * pd.Series(generos.sum()).sort_values(ascending = False) / generos.shape[0]
+
+# Visualiza
+generos_percentual.head(10)
+
+# Plot
