@@ -129,3 +129,35 @@ plt.title("Distribuição de Titulos", loc = 'Center', fontdict = {'fontsize':20
 plt.show()
 
 # Qual o Número de Títulos Por Gênero
+# Vamos calcular o número de filmes por genero e entregar o resultado em valor percentual
+# Criando a consulta SQL
+consulta2 = '''SELECT genres, COUNT(*) FROM titles WHERE type = 'movie' GROUP BY genres'''
+
+# Resultado
+resultado2 = pd.read_sql_query(consulta2, conn)
+
+# Visualizando o Resultado
+display(resultado2)
+
+# Converte as Strings para Minusculo
+resultado2['genres'] = resultado2['genres'].str.lower().values()
+
+# Remove valores NA (Ausentes)
+temp = resultado2['genres'].dropna()
+          
+# Vamos criar um vetor usando expressao regular para filtrar as Strings
+# https://docs.python.org/3.8/library/re.html
+padrao = '(?u)\\b[\\w-]+\\b'
+
+# https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction..text.CountVectorizer.html
+vetor = CountVectorizer(token_pattern = padrao, analyzer = 'word').fit(temp)
+
+type(vetor)
+
+# Aplica a vetorização ao dataset sem valores NA
+bag_generos = vetor.transform(temp)
+
+type(bag_generos)
+
+# Retorna gêneros únicos
+generos_unicos = vetor.get_feature_names()
