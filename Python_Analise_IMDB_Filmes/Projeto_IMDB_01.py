@@ -250,3 +250,22 @@ df_genero_ratings = df_genero_ratings.sort_values(by = 'ratings', ascending = Fa
 
 # Figura
 plt.figure(figsize = (16,10) )
+
+# Barplot
+sns.barplot(y = df_genero_ratings.genres, x = df_genero_ratings.rating, orient = "h")
+
+# Textos do Gráfico
+for i in range(len(df_genero_ratings.index)):
+          plt.text(4.0, i + 0.25,
+                  str(df_genero_ratings['count'][df_genero_ratings.index[i]]) + " filmes" )
+          
+          plt.text(df_genero_ratings.rating[df_genero_ratings.index[i]],
+                  i + 0.25,
+                  round(df_genero_ratings["rating"][df_genero_ratings.index[i]],2 ) )
+
+plt.ylabel('Gênero')
+plt.xlabel('Avaliação')
+plt.title('\nMediana da Avaliação Por Gênero\n')
+plt.show()
+
+# 4 - Qual a Mediana de Avaliação dos Filmes Em Relação ao Ano de Estreia
