@@ -269,3 +269,92 @@ plt.title('\nMediana da Avaliação Por Gênero\n')
 plt.show()
 
 # 4 - Qual a Mediana de Avaliação dos Filmes Em Relação ao Ano de Estreia
+# Mediana de avaliação dos filmes
+
+# Consulta SQL
+consulta4 = '''
+SELECT rating AS Rating, premiered FROM
+ratings JOIN titles ON ratings.title_id = titles.title_id
+WHERE premiered <= 2022 AND type = 'movie'
+ORDER BY premiered
+'''
+
+# Resultado
+resultado4 = pd.read_sql_query(consulta4, conn)
+
+display(resultado4)
+
+# Calculamos a mediana ao longo do tempo (anos)
+ratings = []
+for year in set(resultado4['premiered']):
+          ratings.append(np.median(resultado4[resultado4['premiered'] == year] ['Rating'] ))
+
+type(ratings)
+
+ratings[1:10]
+
+# Lista de Anos
+anos = list(set(resultado4['premiered']))
+
+anos[1:10]
+
+# Plot
+plt.figure(figsize = (16, 8) )
+plt.plot(anos, ratings)
+plt.xlabel('\nAno')
+plt.ylabel('\nMediana de Avaliação')
+plt.title('\nMediana de Avaliação dos Filmes Em Relação ao Ano de Estréia \n')
+plt.show()
+
+# 5 - Qual o Número de Filmes Avaliados Por Gênero Em Relação ao Ano de Estréia
+# Número de Filmes por gênero. Vamos listar os Top 5
+
+# Consulta SQL
+consulta5 = '''SELECT genres FROM titles'''
+
+# Resultado
+resultado5 = pd.read_sql_query(consulta5, conn)
+
+display(resultado5)
+
+# Retorna gêneros únicos
+generos_unicos = retorna_generos(resultado5)
+
+# Visualiza o resultado
+generos_unicos
+
+# Agora fazemos a contagem
+genero_count = []
+for item in generos_unicos:
+          consulta = 'SELECT COUNT(*) COUNT FROM titles WHERE genres LIKE ' + '\'' + '%' + item + '%' + '\' AND type=\ 'movie\ ' AND
+          resultado = pd.read_sql_query(consulta, conn)
+          genero_count.append(resultado['COUNT'].values[0])
+
+# Prepara o DataFrame
+df_genero_count = pd.DataFrame()
+df_genero_count['genre'] = generos_unicos
+df_genero_count['Count'] = genero_count
+
+# Calcula os top 5
+df_genero_count = df_genero_count[df_genero_count['genre'] != 'n' ]
+df_genero_count = df_genero_count.sort_values(by = 'Count', ascending = False)
+top_generos = df_genero_count.head()['genre'].Values
+
+# Plot
+# Figura
+plt.figure(figsize = (16,8) )
+
+# Loop e Plot
+for item in top_generos:
+          consulta = 'SELECT COUNT(*) Number_of_movies, premiered Year FROM titles WHERE genres LIKE ' + '\'' + '%' + item + '%' + '
+          resultado = pd.read_sql_query(consulta, comnn)
+          plt.plot(resultado['Year'], resultado['Number_of_movies'] )
+
+plt.xlabel('\nAno')
+plt.ylabel('Número de Filmes Avaliados')
+plt.title('\nNúmero de Filmes Avaliados Por Gênero Em Relação ao Ano de Estréia\n')
+plt.legend(labels = top_generos)
+plt.show()
+
+# 6 - Qual o Filme Com Maior Tempo de Duração, Calcule os Percentis
+          
