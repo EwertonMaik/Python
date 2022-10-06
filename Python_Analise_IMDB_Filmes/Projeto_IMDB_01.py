@@ -357,4 +357,29 @@ plt.legend(labels = top_generos)
 plt.show()
 
 # 6 - Qual o Filme Com Maior Tempo de Duração, Calcule os Percentis
-          
+# Percentis e filme mais longo da história
+
+# Consulta SQL
+consulta6 = '''
+SELECT runtime_minutes Runtime FROM titles
+WHERE type = 'movie' AND Runtime != 'Nan'
+'''
+
+# Resultado
+resultado6 = pd.read_sql_query(consulta6, conn)
+
+display(resultado6)
+
+# Loop para calculo dos percentis
+for i in range(101):
+          val = i
+          perc = round(np.percentile(resultado6['Runtime'].values, val), 2 )
+          print('{} percentil da duração (runtime) é: {} '.format(val, perc) )
+
+# Refazendo a consulta e retornando o filme com maior duração
+consulta6 = '''
+SELECT runtime_minutes Runtime, primary_title
+FROM titles
+WHERE type = 'movie' AND Runtime != 'NaN'
+ORDER BY Runtime DESC
+LIMIT 1
