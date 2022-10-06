@@ -445,3 +445,42 @@ plt.title('\nRelação Entre Duração e Gênero\n')
 plt.show()
 
 # 8 - Qual o Número de Filmes Produzidos Por País
+# Número de Filmes produzidos por pais
+
+# Consulta SQL
+consulta8 = '''
+SELECT region, COUNT(*) Number_of_movies FROM
+akas JOIN titles ON
+akas.title_id = titles.title_id
+WHERE region != 'None' AND type = \'movie\'
+GROUP BY region
+'''
+
+# Resultado
+resultado8 = pd.read_sql_query(consulta8, conn)
+
+display(resultado8)
+
+# Shape
+resultado8.shape
+
+# Número de linhas
+resultado8.shape[0]
+
+# Número de Linhas
+resultado8.shape[0]
+
+# Listas Auxiliares
+nomes_paises = []
+contagem = []
+
+# Loop para obter o pais de acordo com a região
+for i in range(resultado8.shape[0]):
+          try:
+          coun = resultado8['region'].values[i]
+          nomes_paises.append(pycountry.countries.get(alpha_2 = coun).name )
+          contagem.append(resultado8['Number_of_movies'].values[i])
+          except:
+          continue
+
+# Prepara o DataFrame
