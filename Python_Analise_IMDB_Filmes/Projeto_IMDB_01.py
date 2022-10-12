@@ -484,3 +484,68 @@ for i in range(resultado8.shape[0]):
           continue
 
 # Prepara o DataFrame
+df_filmes_paises = pd.DataFrame()
+df_filmes_paises['country'] = nomes_paises
+df_filmes_paises['Movie_Count'] = contagem
+
+# Ordena o resultado
+df_filmes_paises = df_filmes_paises.sort_values(by = 'Movie_Count', ascending = False)
+
+# Visualiza 10 primeiras linhas
+df_filmes_paises.head(10)
+
+# Plot
+# Figura
+plt.figure(figsize = (20, 8) )
+
+# Barplot
+sns.barplot(y = df_filmes_paises[:20].country, x = df_filmes_paises[:20].Movie_Count, orient = "h")
+
+# Loop
+for i in range(0, 20):
+          plt.text(df_filmes_paises.Movie_Count[df_filmes_paises.index[i]] - 1,
+                  i + 0.30,
+                  round(df_filmes_paises["Movie_Count"] [df_filmes_paises.index[i]], 2) )
+
+plt.ylabel('País')
+plt.xlabel('\nNúmero de Filmes')
+plt.title('\nNúmero de Filmes Produzidos Por País\n')
+plt.show()
+
+# 9 - Quais são os Top 10 Melhores Filmes
+# Top 10 filmes com melhor avaliação e mais de 25 mil votos
+
+# Consulta SQL
+consulta9 = '''
+SELECT primary_title as Movie_Name, genres, rating
+FROM
+titles JOIN ratings
+ON titles.title_id = ratings.title_id
+WHERE titles.type = 'movie' AND ratings.votes >= 25000
+ORDER BY rating DESC
+LIMIT 10
+'''
+
+# Resultado
+top10_melhores_filmes = pd.read_sql_query(consulta9, conn)
+
+display(top10_melhores_filmes)
+
+# 10 - Quais são os Top 10 Piores Filmes
+# Top 10 filmes com pior avaliação e mais de 25 mil votos
+
+# Consulta SQL
+consulta9 = '''
+SELECT primary_title as Movie_Name, genres, rating
+FROM
+titles JOIN ratings
+ON titles.title_id = ratings.title_id
+WHERE titles.type = 'movie' AND ratings.votes >= 25000
+ORDER BY rating ASC
+LIMIT 10
+'''
+
+# Resultado
+top10_piores_filmes = pd.read_sql_query(consulta10, conn)
+
+display(top10_piores_filmes)
