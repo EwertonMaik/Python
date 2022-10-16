@@ -41,7 +41,9 @@ Desenvolvimento Linguagem Python
 ▶ Numby - Numerical Python:
 - Pacote Python utilizado na computação Matemática, com suporte a Arrays e Matrizes, provenientes dos pacotes Numeric e Numarray
 - Operações com Álgebra Linear e  Integração com C, C++ e Fortran
-- Array Numpy são homogêneos, estáticos, eficiente no uso de memória
+- Array Numpy são homogêneos, estáticos, eficiente no uso de memória, ais rápida e mais poderosa que listas
+- Um rápido e eficiente array multidimencional
+- Ferramentas para leitura de datasets baseados em arrays
 
 ▶ Conexões a Fontes e Banco de Dados com Python 
 - SQLite  - https://github.com/EwertonMaik/Python/tree/main/Python_DB_SQLite
