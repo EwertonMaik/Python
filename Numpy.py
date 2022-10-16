@@ -35,6 +35,7 @@ print(vetor01[5])
 
 ## Atribuindo um novo valor a posição 5 do vetor
 vetor01[5] = 100
+vetor01[5] = 'Novo Elemnto String' ## Obtêm erro devido array ser apenas de um tipo
 
 ## Função que retorna quantas dimensões e elementos o vetor possui
 print(vetor01.shape)
