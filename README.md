@@ -39,6 +39,7 @@ Desenvolvimento Linguagem Python
 - close()      - Fecha arquivo
 
 ▶ Numby - Numerical Python:
+- Site Pacote (www.numpy.org)
 - Pacote Python utilizado na computação Matemática, com suporte a Arrays e Matrizes, provenientes dos pacotes Numeric e Numarray
 - Operações com Álgebra Linear e  Integração com C, C++ e Fortran
 - Array Numpy são homogêneos, estáticos, eficiente no uso de memória, ais rápida e mais poderosa que listas
