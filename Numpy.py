@@ -39,3 +39,22 @@ vetor01[5] = 'Novo Elemnto String' ## Obtêm erro devido array ser apenas de um 
 
 ## Função que retorna quantas dimensões e elementos o vetor possui
 print(vetor01.shape)
+
+## Numpy - Metódo e Operações com DataSets
+## Usando o Método Random() do Numpy
+print(np.random.rand(10) )
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+print(np.random(10) )
+
+plt.show((plt.hist(np.random.rand(1000))))
+
+print(np.random.randn(5,5))
+
+plt.show(plt.hist(np.random.randn(1000)) )
+
+imagem = np.random.rand(30, 30)
+plt.imshow(imagem, cmap = plt.cm.hot)
+plt.colorbar()
