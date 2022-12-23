@@ -58,3 +58,57 @@ plt.show(plt.hist(np.random.randn(1000)) )
 imagem = np.random.rand(30, 30)
 plt.imshow(imagem, cmap = plt.cm.hot)
 plt.colorbar()
+
+## Operações com datasets
+import os
+filename = os.path.join('iris.csv')
+
+## No Windows use !more iris.csv. Mac ou Linux use !head iris.csc
+!head iris.csv
+
+# Carregando um dataset para dentro de um array
+arquivo = np.loadtxt(filename, delimiter='', usecols=(0,1,2,3), skiprows=1)
+print(arquivo)
+
+type(arquivo)
+
+# Gerando um plot a partir de um arquivo usando o Numpy
+var1, var2 = np.loadtxt(filename, delimiter=',', usecols=(0,1), skiprows=1, unpack=True)
+plt.show(plt.plot(var1, var2, 'o', markersize = 8, alpha = 0.75))
+
+## Estatística
+# Criando um Array
+A = np.array([15, 23, 63, 94, 75])
+
+
+# Em estatística a média é o valor que aponta para onde mais se concentram os dados de uma distribuição
+np.mean(A)
+
+# O Desvio padrão mostra o quanto de variação ou dispersão existe em relação à média (ou valor esperado)
+# Um baixo desvio padrão indica que os dados tendem a estar próximos da média.
+# Um desvio padrão alto indica que os dados estão espalhados por uma gama de valores
+np.std(A)
+
+# Variãncia de uma variável aleatória é uma medida de sua dispersão estatística, indicando o  quão longe em geral os valores se
+# Encontram do valor esperado
+np.var(A)
+
+d = np.arange(1, 10)
+np.sum(d)
+
+# Retorna o produto dos Elementos
+np.prod(d)
+
+# Soma acumulada dos elementos
+np.cumsum(d)
+
+a = np.random.randn(400,2)
+m = a.mean(0)
+print(m, m.shape)
+
+plt.plot(a[:0], a[:,1], 'o', markersize = 5, alpha = 0.50)
+plt.plot(m[0], m[1], 'ro', markersize = 10)
+plt.show()
+
+# Outras Operações com Arrays
+# Slicing
