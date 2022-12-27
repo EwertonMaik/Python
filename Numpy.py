@@ -112,3 +112,42 @@ plt.show()
 
 # Outras Operações com Arrays
 # Slicing
+a = np.diag(np.arange(3))
+a
+a[1,1]
+a[1]
+
+b = np.arange(10)
+b
+
+# [start:end:step]
+b[2:9:3]
+
+# Comparação
+a = np.array([1, 2, 3, 4])
+b = np.array([4, 2, 2, 4])
+a == b
+
+np.array_equal(a, b)
+a.min()
+a.max()
+
+# Somando um elemento ao array
+np.array([1, 2, 3]) + 1.5
+
+# Usando o método around
+a = np.array([1.2, 1.5, 1.6, 2.5, 3.5, 4.5])
+b = np.around(a)
+b
+
+# Criando um array
+b = np.array([1, 2, 3, 4])
+b
+
+# Copiando um Array
+c = b.flatten()
+c
+
+# Criando um array
+v = np.array([1, 2, 3])
+
