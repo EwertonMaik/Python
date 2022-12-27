@@ -151,3 +151,23 @@ c
 # Criando um array
 v = np.array([1, 2, 3])
 
+# Adicionando uma dimensão ao array
+v[:, np.newaxls], v[:, np.newaxls].shape, v[np.newaxls, :].shape
+
+# Repetindo os elementos de um array
+np.repeat(v, 3)
+
+# Repetindo os elementos de um array
+np.tile(v, 3)
+
+# Criando um array
+w = np.array([5, 6])
+
+# Concatnando
+np.concatenate((v, w), axis = 0)
+
+# Copiando arrays
+r = np.copy(v)
+
+r
+## FIM
