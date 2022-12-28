@@ -50,3 +50,25 @@ Desenvolvimento Linguagem Python
 - SQLite  - https://github.com/EwertonMaik/Python/tree/main/Python_DB_SQLite
 - MongoDB - https://github.com/EwertonMaik/Python/tree/main/Python_MongoDB
 - PowerBI - https://github.com/EwertonMaik/Python/tree/main/Python_PowerBI
+
+Pandas é uma biblioteca criada para manipular de forma rápida e espressiva, dados estruturados.
+Pandas é um dos compponentes principais no portifólio Python para Análise de Dados.
+Pandas possui uma sofisticada funcionalidade de indexação que torna fácil o "slice and dice", agregações e seleção de subsets de dados.
+Pandas possui ainda funcionalidades de manipulação de dados de séries temporáis de alta performance, ideal para manipulação de dados financeiros.
+Pandas é uma excelente opção para Data Munging / Wrangling.
+Data Munging / Wrangling é basicamente o processo de converter e mapear dados de um estado "bruto" em outro formato que permita manipular os dados com ferramentas de mais alto nível, como por exemplo aplicar algoritmos de Machine Learning.
+Pandas é largamente utilizado na fase de preparação dos Dados, uma das fases mais importantes no processo de Data Science.
+Pandas contém estruturas de alto nível e ferramentas de manipulação que torna a análise de dados rápida e
+fácil com Python. Pandas funciona muito bem com NumPy e juntos eles oferecem:
+Estruturas de dados de alto nível
+Funcionalidade de time-series (séries temporáriais)
+A mesma estrutura de dados consegue tratar dados time-series e não time-series
+Tratamento flexível de dados missing
+Merge e outras operações relacionais com SQL
+Series e DataFrames
+Series é um array unidimensional que contém um array de dados e um array de labels, chamado índice.
+DataFramess representam uma estrutura tabular semelhante a estrutura de uma planilha do Microsoft Excel,
+contendo uma coleção de colunas em que cada uma pode ser um diferente tipo de valor (número, string, etc...)
+Os DataFrames possuem index e linhas e esta estrutura é muito semelhante a um dataframe em R. Os dados de um
+DataFrame são armazenados em ou mais blocos bidimensionais, ao invés de listas,
+dicionários ou alguma outra estrutura de array.
