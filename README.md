@@ -10,7 +10,7 @@ Desenvolvimento Linguagem Python
 - 🌐 Google Colab (https://colab.research.google.com/)
 - Repositório de Pacotes Python - (https://pypi.org/)
 - Projeto Data Science Acadamy - (https://github.com/dsacademybr/PythonFundamentos)
-- Documentação PANDAS - (pandas.pydata.org)
+- Documentação PANDAS - (https://pandas.pydata.org)
 
 ▶ Jupyter Notebook - Ferramenta Web, cada linha é representado por uma célula, que pode ser editada e redirecionada. As células podem ser code, markdown e é possível adicionar código html dentro do arquivo jupyter notebook, com textos estilos, equações e visualizações interativas.
 
