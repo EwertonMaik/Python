@@ -47,3 +47,46 @@ Obj4
 
 pd.isnull(Obj4)
 pd.notnull(Obj4)
+
+Obj4.isnull()
+
+# Concatenando Series
+Obj3 + Obj4
+
+Obj4.name = 'população'
+Obj4.index.name = 'esporte'
+Obj4
+
+
+## DataFrames
+from pandas import DataFrame
+
+data = {'Estado': ['Santa Catarina','Paraná','Goiás','Bahia','Minas Gerais'],
+        'Ano': [2002, 2003, 2004, 2005, 2006],
+        'População': [1.5, 1.7, 3.6, 2.4, 2.9]
+        }
+
+frame = DataFrame(data)
+frame
+type(frame)
+DataFrame(data, columns = ['Ano', 'Estado', 'População'])
+
+# criando outro dataframe com os mesmos dados anteriores mas adicionando uma coluna
+frame2 = DataFrame(data, columns = ['Ano', 'Estado', 'População', 'Débito'],
+                         index = ['um','dois','três','quatro','cinco'] )
+
+# Imprimindo o Datafr,ame
+frame2
+
+# Imprimindo apenas uma coluna do DataFrame
+frame2['Estado']
+type(frame2)
+frame2.index
+frame2.columns
+frame2.values
+frame2.dtypes
+frame2['Ano']
+frame2.Ano
+frame2[:2]
+
+## Usando Numpy e Pandas
