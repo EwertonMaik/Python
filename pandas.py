@@ -90,3 +90,36 @@ frame2.Ano
 frame2[:2]
 
 ## Usando Numpy e Pandas
+import numpy as np
+
+## Usando o Numpy para alimentar uma das colunas do dataframe
+frame2['Débito'] = np.arange(5.)
+frame2
+frame2.values
+frame2.describe()
+frame2['dois':'quatro']
+frame2 < 5
+
+## Localizando Registros Dentro do DataFrame
+frame2.loc['quatro']
+frame2.iloc[2]
+
+## Invertendo as Colunas e Índices
+## Criando um Dicionario
+web_stats = {'Dias' : [1,2,3,4,5,6,7]
+             'Visitantes' : [45,23,67,78,23,12,14],
+             'Taxas' : [11,22,33,44,55,66,77]
+                }
+
+df = pd.DataFrame(web_stats)
+print(df)
+
+## Visualizando uma coluna como index
+print(df.set_index('Dias') )
+print(df.head() )
+print(df['Visitantes'] )
+print(df[['Visitantes'], ['Taxas'] ] )
+
+
+## DataFrames e Arquivos CSV
+## Usando o método read_csv
