@@ -123,3 +123,53 @@ print(df[['Visitantes'], ['Taxas'] ] )
 
 ## DataFrames e Arquivos CSV
 ## Usando o método read_csv
+df = pd.read_csv('salarios.csv')
+df
+
+# Usando o método read_table
+df = pd.read_table('salarios.csv', sep = ',')
+df
+
+# No Windows use !type. No Mac ou Linux use !head
+!head salarios.csv
+
+# Alterando o título das colunas
+df = pd.read_csv('salarios.csv', names = ['a','b','c','d'] )
+df
+
+import sys
+data = pd.read_csv('salarios.csv')
+data.to_csv(sys.stdout, sep = '|' )
+
+# Criando um DataFrame
+dates = pd.date_range('20180101', periods = 10)
+df = pd.DataFrame(np.random.randn(10,4), index = dates, columns = list('ABCD') )
+df
+df.head()
+
+# Quick Data Summary
+df.describe()
+
+# Calculando a Média
+df.mean()
+
+# Pivot  - Calculando a Média para Cada Linha
+df.mean(1)
+
+# Usando Métodos - Função que calcula a soma acumulada
+df.apply(np.cumsum)
+
+# Merge de DataFrames -- DataFrame Criado a partir de um Dicionário
+left = pd.DataFrame( {'chave' : ['chave1','chave2'], 'coluna1' : [1,2] } )
+right = pd.Dataframe( {'chave' : ['chave1','chave2'], 'coluna2' : [4,5] } )
+pd.merge(left, right, on = 'chave')
+
+# Adicionando um elemento ao DataFrame
+df = pd.DataFrame(np.random.randn(8,4), columns = ['A','B','C','D'] )
+df
+s = df.iloc[3]
+
+# Adicionando um Elemento ao DataFrame
+df.append(s, ignore_index = True)
+
+## Time Series - Séries Temporais e Plotting
