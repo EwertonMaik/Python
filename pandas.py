@@ -173,3 +173,52 @@ s = df.iloc[3]
 df.append(s, ignore_index = True)
 
 ## Time Series - Séries Temporais e Plotting
+# Criando uma range de data com frequencia de segundos
+rng = pd.date_range('1/1/2018', periods = 50, freq = 's')
+
+ts = pd.Series( np.random.randint(0, 500, len(rng)), index = rng )
+ts
+
+# Criando um range de datas com frequencia de meses
+rng = pd.date_range('1/1/2016', periods = 5, freq = 'M')
+ts = pd.Series( np.random.randn(len(rng)), index = rng )
+ts
+
+# Plotting
+import matplotlib.pyplot as plt
+from matplotlib import style
+%matplotlib inline
+
+# Time Series Plot
+ts = pd.Series(np.random.randn(500), index = pd.date_range('1/1/2016', periods = 500) )
+ts = ts.cumsum()
+ts.plot()
+
+# DataFrame Plot
+df = pd.DataFrame( np.random.randn(500, 4), index = ts.index, columns = ['A','B','C','D'] )
+df = df.cumsum()
+plt.figure();
+df.plot();
+plt.legend(loc = 'best')
+
+# Output
+# Import
+import os
+
+# Verificando se o arquivo existe. No Windows use !type teste-df-output.xlsx
+!head teste-df-output.xlsx
+
+# Gerando um arquivo excel a partir de um DataFrame
+df.to_excel('teste-df-output.xlsx', sheet_name = 'Sheet1')
+
+# Verificando se o arquivo existe. No windows use !type teste-df-output.xlsx
+!head teste-df-output.xlsx
+
+# Lendo o arquivo excel para um DataFrame
+newDf2 = pd.read_excel('teste-df-output.xlsx', 'Sheet1', index_col = None, na_values = ['NA'] )
+newDf2.head()
+
+os.remove('teste-df-output.xlsx')
+
+# Verificando se o arquivo existe. No windows use !type teste-df-output.xlsx
+!head teste-df-output.xlsx
