@@ -13,3 +13,25 @@ def limpar_tela():
 # Mac ou Linux
   else:
     _ = system('clear')
+
+# Função
+def game():
+  limpar_tela()
+
+print("\nBem-vinddo(a) ao jogo da forca!")
+print("Adivinhe a palavra abaixo:\n")
+
+# Lista de palavras para o jogo
+palavras = ['banana', 'abacate', 'uva', 'morango', 'laranja']
+
+# Escolha randomicamente uma palavra
+palavra = rondom.choice(palavras)
+
+# List Comprehension
+letras_descobertas = [ '_' for letra in palavra ]
+
+# Numero de chances
+chances = 6
+
+# Lista para as letras erradas
+letras_errada = []
