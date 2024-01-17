@@ -17,15 +17,15 @@ def limpar_tela():
 # Função
 def game():
   limpar_tela()
+  
+  print("\nBem-vinddo(a) ao jogo da forca!")
+  print("Adivinhe a palavra abaixo:\n")
 
-print("\nBem-vinddo(a) ao jogo da forca!")
-print("Adivinhe a palavra abaixo:\n")
+  # Lista de palavras para o jogo
+  palavras = ['banana', 'abacate', 'uva', 'morango', 'laranja']
 
-# Lista de palavras para o jogo
-palavras = ['banana', 'abacate', 'uva', 'morango', 'laranja']
-
-# Escolha randomicamente uma palavra
-palavra = rondom.choice(palavras)
+  # Escolha randomicamente uma palavra
+  palavra = rondom.choice(palavras)
 
 # List Comprehension
 letras_descobertas = [ '_' for letra in palavra ]
