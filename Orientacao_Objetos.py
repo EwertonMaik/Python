@@ -44,17 +44,47 @@ Rex.raca -- Consultando o valor do atribudo raca de cada Objeto criado
 Golias.raca
 
 ## Tudo na Linguagem Python é orientado a objetos
-lst_num = ["Data", "Science", "Academy", "Nota", 10, 10] -- Criado uma lista que pertence a classe List, o interpretador sabe pela utilização das chaves
-type(lst_num) -- Consultando o tipo do Objeto criando anteriormente
+# Criado uma lista que pertence a classe List, o interpretador sabe pela utilização das chaves
+lst_num = ["Data", "Science", "Academy", "Nota", 10, 10]
 
--- Utilizando o método print para consultar e imprimir o tipo de cada tipo de objetos do Python
+# Consultando o tipo do Objeto criando anteriormente
+type(lst_num)
+
+lst_num.count(10)
+
+# Utilizando o método print para consultar e imprimir o tipo de cada tipo de objetos do Python
 print(type(10)) -- INT - Inteiro
 print(type([])) -- LIST - Lista
 print(type(())) -- TUPLE - Tuplas
 print(type({})) -- DICT - Dicionário
 print(type('a')) -- SRT - String
 
--- Criando uma classe Funcionarios para os exemplos seguintes
+# Criando um novo tipo de objeto chamado Carro
+class Carro(Object):
+ pass
+
+# Instância do Carro
+ferrari = Carro()
+
+print( type()ferrari )
+
+# Criando uma cllasse
+class Estudantes:
+ def __init__(self, nome, idade, nota):
+  self.nome = nome
+  self.idade = idade
+  self.nota = nota
+
+# Criando um objeto chamado Estudante1 a partir da classe Estudantes
+Estudante1 = Estudantes("Bob", 12, 9,5)
+
+# Atributo da classe Estudante, utilizado por cada objeto criado a partir desta classe
+Estudante.nome
+Estudante.idade
+Estudante.nota
+
+
+# Criando uma classe Funcionarios para os exemplos seguintes
 class Funcionarios:
     def __init__(self, nome, salario): -- Méptodo construtor que recebe 2 parâmetros
         self.nome = nome
