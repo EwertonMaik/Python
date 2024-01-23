@@ -12,3 +12,40 @@ class Livro():
   # Métodos são funções que executam ações nos objetos da classe
   def imprime(self):
     print("Foi criado o livro %s com ISBN %d" %(self.titulo, self.isbn) )
+
+
+# Criando uma Instância da classe livro
+Livro1 = Livro()
+
+# O objeto Livro1 é do tipo Livro
+type(Livro1)
+
+# Atributo do objeto Livro1
+Livro1.titulo
+
+# Método do objeto Livro1
+Livro1.imprime()
+
+###########################################################################
+
+# Criando a classe Livro com parâmetros no método construtor
+class Livro():
+  def __init__(self, titulo, isbn):
+    self.titulo = titulo
+    self.isbn = isbn
+    print("Construtor chamado para criar um objeto desta classe.")
+
+  def imprime(self, titulo, isbn):
+    print("Este é o livro %s e ISBN %d" %(titulo, isbn) )
+
+# Criando o objeto Livro2 que é uma instância da classe Livro
+Livro2 = Livro("O Poder do Hábito", 77886611)
+
+Livro2.titulo
+
+# Método do objeto Livro2
+Livro2.imprime("O Poder do Hábito", 77886611)
+
+###########################################################################
+
+# Criando a classe cachorro
