@@ -89,6 +89,7 @@ class Funcionarios:
     def __init__(self, nome, salario): -- Méptodo construtor que recebe 2 parâmetros
         self.nome = nome
         self.salario = salario
+        self.cargo = cargo
 
     def listFunc(self): -- Método para Listar o Funcionário cadastrado
         print("O nome do funcionário é " + self.nome + " e o salário é R$" + str(self.salario))
@@ -103,6 +104,7 @@ hasattr(Func1, "salario") -- Mesmo exemplo anterior, porém para outro atributo
 setattr(Func1, "salario", 4500) -- Pergunta para o objeto se existe o atributo informado, caso exista, atribuido o novo salário de 4.500, caso não é criado e atribuido o valor
 getattr(Func1, "salario") -- Consultando ao Objeto Func1 o valor do atributo salário
 delattr(Func1, "salario") -- Deletando o atributo "salário" do objeto "func1"
+
 
 ## Herença
 -- O exemplo a seguir demonstra a utilização de Heraça de uma classe especifica herdando atributos de uma classe genérica
